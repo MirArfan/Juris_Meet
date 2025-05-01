@@ -10,6 +10,9 @@ import AllApointments from './pages/Admin/AllApointments';
 import AddLawyers from './pages/Admin/AddLawyers';
 import LawyersList from './pages/Admin/LawyersList';
 import { LawyerContext } from './context/LawyerContext';
+import LawyerDashboard from './pages/Lawyer/LawyerDashboard';
+import LawyerAppointment from './pages/Lawyer/LawyerAppointment';
+import LawyerProfile from './pages/Lawyer/LawyerProfile';
 
 
 
@@ -25,11 +28,16 @@ const App = () => {
       <div className='flex items-start'>
         <Sidebar/>
         <Routes>
+          {/* Admin Route */}
           <Route path='/' element={<></>}/>
           <Route path='/admin-dashboard' element={<Dashboard/>}/>
           <Route path='/all-appointments' element={<AllApointments/>}/>
           <Route path='/add-lawyer' element={<AddLawyers/>}/>
           <Route path='/lawyer-list' element={<LawyersList/>}/>
+          {/* Lawyer Route */}
+          <Route path='/lawyer-dashboard' element={<LawyerDashboard/>}/>
+          <Route path='/lawyer-appointments' element={<LawyerAppointment/>}/>
+          <Route path='/lawyer-profile' element={<LawyerProfile/>}/>
         </Routes>
       </div>
     </div>

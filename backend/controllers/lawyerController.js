@@ -1,6 +1,7 @@
 import lawyerModel from "../models/lawyerModel.js"
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
+import appointmentModel from "../models/appointmentModel.js"
 
 const changeAvailability = async (req, res) => {
     try {
@@ -44,4 +45,56 @@ const loginLawyer=async(req, res)=>{
         
     }
 }
-export { changeAvailability, lawyerList, loginLawyer }
+
+// API to get lawyer appointment for lawyer panel
+const appointmentLawyer=async(req, res)=>{
+    try {
+        const {lawId} = req.body
+        const appointments=await appointmentModel.find({lawId})
+        res.json({success:true, appointments})
+    } catch (error) {
+        console.log(error)
+        res.json({ success: false, message: error.message })    
+        
+    }
+}
+
+
+// API to mark appointment completed for lawyer panel
+const appointmentComplete=async(req, res)=>{
+    try {
+        const {lawId , appointmentId}=req.body
+        const appointmentData=await appointmentModel.findById(appointmentId)
+        if(appointmentData && appointmentData.lawId===lawId){
+            await appointmentModel.findByIdAndUpdate(appointmentId, {isCompleted:true})
+            return res.json({success:true, message: 'Appointment Completed'})
+        }
+        else{
+            return res.json({success: false, message: "Mark Failed"})
+        }
+    } catch (error) {
+        console.log(error)
+        res.json({ success: false, message: error.message })    
+       
+    }
+}
+
+// API to mark appointment completed for lawyer panel
+const appointmentCancel=async(req, res)=>{
+    try {
+        const {lawId , appointmentId}=req.body
+        const appointmentData=await appointmentModel.findById(appointmentId)
+        if(appointmentData && appointmentData.lawId===lawId){
+            await appointmentModel.findByIdAndUpdate(appointmentId, {cancelled:true})
+            return res.json({success:true, message: 'Appointment Cancelled'})
+        }
+        else{
+            return res.json({success: false, message: "Cancellation Failed"})
+        }
+    } catch (error) {
+        console.log(error)
+        res.json({ success: false, message: error.message })    
+       
+    }
+}
+export { changeAvailability, lawyerList, loginLawyer, appointmentLawyer, appointmentCancel, appointmentComplete }
