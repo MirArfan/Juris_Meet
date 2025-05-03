@@ -9,6 +9,7 @@ const LawyerContextProvider = (props) => {
     const backendUrl = import.meta.env.VITE_BACKEND_URL
     const [lToken, setLToken] = useState(localStorage.getItem('lToken') ? localStorage.getItem('lToken') : '')
     const [appointments, setAppointments] = useState([])
+    const [dashData, setDashData]=useState(false)
 
     const getAppointments = async () => {
         try {
@@ -63,12 +64,29 @@ const LawyerContextProvider = (props) => {
 
         }
     }
+    const getDashData=async()=>{
+        try {
+            const {data}=await axios.get(backendUrl+'/api/lawyer/dashboard',{headers:{lToken}})
+            if(data.success){
+                setDashData(data.dashData)
+                console.log(data.dashData)
+            }
+            else{
+                toast.error(data.message)
+            }
+        } catch (error) {
+            toast.error(error.message)
+            console.log(error)
+
+        }
+    }
 
     const value = {
         lToken, setLToken,
         backendUrl,
         getAppointments, appointments, setAppointments,
         completeAppointment, cancelAppointment,
+        getDashData, dashData, setDashData,
     }
 
     return (
