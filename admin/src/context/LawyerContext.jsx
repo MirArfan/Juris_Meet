@@ -7,9 +7,11 @@ export const LawyerContext = createContext();
 const LawyerContextProvider = (props) => {
 
     const backendUrl = import.meta.env.VITE_BACKEND_URL
+    
     const [lToken, setLToken] = useState(localStorage.getItem('lToken') ? localStorage.getItem('lToken') : '')
     const [appointments, setAppointments] = useState([])
     const [dashData, setDashData]=useState(false)
+    const [profileData, setProfileData]=useState(false)
 
     const getAppointments = async () => {
         try {
@@ -81,12 +83,27 @@ const LawyerContextProvider = (props) => {
         }
     }
 
+    const getProfileData=async()=>{
+        try {
+            const {data}=await axios.get(backendUrl+'/api/lawyer/profile', {headers:{lToken}})
+            if(data.success){
+                setProfileData(data.profileData)
+                console.log(data)
+            }
+        } catch (error) {
+            toast.error(error.message)
+            console.log(error)
+
+        }
+    }
+
     const value = {
         lToken, setLToken,
         backendUrl,
         getAppointments, appointments, setAppointments,
         completeAppointment, cancelAppointment,
         getDashData, dashData, setDashData,
+        profileData, setProfileData, getProfileData,
     }
 
     return (
