@@ -21,3 +21,4 @@ const authLawyer = async (req, res, next) => {
 }
 
 export default authLawyer
+

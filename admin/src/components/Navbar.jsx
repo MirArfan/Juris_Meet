@@ -2,9 +2,12 @@ import React, { useContext } from 'react'
 import { AdminContext } from '../context/AdminContext'
 import { assets } from '../assets/assets'
 import { useNavigate } from 'react-router-dom'
+import { LawyerContext } from '../context/LawyerContext'
 const Navbar = () => {
 
     const { aToken, setAToken } = useContext(AdminContext)
+    const {lToken, setLToken}=useContext(LawyerContext)
+
     
     const navigate=useNavigate()
     
@@ -12,6 +15,8 @@ const Navbar = () => {
         navigate('/')
         aToken && setAToken('')
         aToken && localStorage.removeItem('aToken')
+        lToken && setLToken('')
+        lToken && localStorage.removeItem('lToken')
     }
 
     return (
