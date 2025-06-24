@@ -47,7 +47,7 @@
 ## 🌍 Live Demo
 
 - **Frontend:** [juris-meet-client.onrender.com](https://juris-meet-frontendd.onrender.com/)
-- **Backend API:** [juris-meet-admin.onrender.com](https://juris-meet-admin.onrender.com/)
+- **Admin:** [juris-meet-admin.onrender.com](https://juris-meet-admin.onrender.com/)
 
 ---
 
