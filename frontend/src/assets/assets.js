@@ -388,20 +388,21 @@ export const lawyers = [
             line1: 'Sylhet',
             line2: 'Bangladesh'
         }
-    },
-    {
-        _id: 'law22',
-        name: 'Barrister Hamid Reza',
-        image: law22,
-        speciality: 'Tax Lawyer',
-        degree: 'LL.B, LL.M',
-        experience: '14 Years',
-        about: 'Barrister Hamid Reza is a leading banking and finance lawyer specializing in banking regulations, loan agreements, and investment laws. With fourteen years of experience, he advises financial institutions, corporate clients, and individuals on loan structuring, debt recovery, and compliance with financial regulations. His expertise ensures legal security in financial transactions.',
-        fees: 9200,
-        address: {
-            line1: 'Barishal',
-            line2: 'Bangladesh'
-        }
     }
+    // ,
+    // {
+    //     _id: 'law22',
+    //     name: 'Barrister Hamid Reza',
+    //     image: law22,
+    //     speciality: 'Tax Lawyer',
+    //     degree: 'LL.B, LL.M',
+    //     experience: '14 Years',
+    //     about: 'Barrister Hamid Reza is a leading banking and finance lawyer specializing in banking regulations, loan agreements, and investment laws. With fourteen years of experience, he advises financial institutions, corporate clients, and individuals on loan structuring, debt recovery, and compliance with financial regulations. His expertise ensures legal security in financial transactions.',
+    //     fees: 9200,
+    //     address: {
+    //         line1: 'Barishal',
+    //         line2: 'Bangladesh'
+    //     }
+    // }
     
 ];
