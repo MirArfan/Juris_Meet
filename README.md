@@ -71,6 +71,6 @@
 
 - Node.js
 - MongoDB
-- Git
+
 
 
