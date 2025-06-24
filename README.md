@@ -9,7 +9,7 @@
 ### 🌐 Client Side
 - Browse available lawyers
 - Book appointments with real-time slots
-- Pay online (bKash, Razorpay, etc.)
+- Pay online (bKash)
 - View and manage bookings
 
 ### 🛠️ Admin Panel
@@ -23,7 +23,7 @@
 
 ### 💳 Payment Integration
 - bKash (via SSLCommerz)
-- Razorpay (for card payments)
+
 
 ---
 
@@ -46,11 +46,25 @@
 
 ## 🌍 Live Demo
 
-- **Frontend:** [juris-meet-client.onrender.com](https://juris-meet-frontendd.onrender.com)
-- **Admin :** [juris-meet-api.onrender.com](https://juris-meet-admin.onrender.com/)
+- **Frontend:** [juris-meet-client.onrender.com](https://juris-meet-frontendd.onrender.com/)
+- **Backend API:** [juris-meet-admin.onrender.com](https://juris-meet-admin.onrender.com/)
 
 ---
 
+
+## 🖼️ Screenshots
+
+### 🏠 Home Page
+![Home Page](./images/frontend_home_page.png)
+
+### 📅 Booking Page
+![Booking Page](./images/booking_page.png)
+
+### 🔐 Login Page
+![Login](./images/login_page.png)
+
+### 🛠️ Admin Dashboard
+![Admin Dashboard](./images/admin_dashboard.png)
 ## 🚀 Getting Started Locally
 
 ### Prerequisites
@@ -59,10 +73,4 @@
 - MongoDB
 - Git
 
-### Backend Setup
 
-```bash
-cd backend
-npm install
-# Add .env file with MongoDB URI, JWT secret, and payment keys
-npm start
