@@ -7,7 +7,7 @@ const Header = () => {
         {/* ------------------left side ------------ */}
         <div className='md:w-1/2 flex flex-col items-start justify-center gap-4 py-10 m-auto md:py-[10vw] md:mb-[-30px]'>
             <p className='text-3xl md:text-4xl lg:text-5xl text-white font-semibold leading-tight md:leading-tight lg:leading-tight'>
-                Book Appintment <br /> With Trusted Lawyers </p>
+                Book Appointment  <br /> With Trusted Lawyers </p>
             <div className='flex flex-col md:flex-row items-center gap-3 text-white text-sm font-light'>
                 <img src={assets.group_profiles} alt="" />
                 <p>Simply browse through our extensive list of trusted lawyers,<br className='hidden sm:block' /> schedule your appointment hassle-free.</p>
