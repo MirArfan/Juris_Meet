@@ -6,7 +6,7 @@ export const LawyerContext = createContext();
 
 const LawyerContextProvider = (props) => {
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL
+    const backendUrl ="https://juris-meet.onrender.com"
     
     const [lToken, setLToken] = useState(localStorage.getItem('lToken') ? localStorage.getItem('lToken') : '')
     const [appointments, setAppointments] = useState([])
