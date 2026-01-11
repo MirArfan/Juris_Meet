@@ -4,6 +4,17 @@
 
 ---
 
+## 🌍 Live Demo
+
+- **Frontend:** [https://juris-meet-frontend-1wod.onrender.com/](https://juris-meet-frontend-1wod.onrender.com/)
+- **Admin:** [https://juris-meet-admin-v22k.onrender.com/](https://juris-meet-admin-v22k.onrender.com/)
+
+login info:
+ - ADMIN EMAIL: admin@jurismeet.com
+ - ADMIN PASSWORD: raahaat54
+
+---
+
 ## 🔍 Features
 
 ### 🌐 Client Side
@@ -41,13 +52,6 @@
 - MongoDB
 - Mongoose
 - JWT Authentication
-
----
-
-## 🌍 Live Demo
-
-- **Frontend:** [juris-meet-client.onrender.com](https://juris-meet-frontendd.onrender.com/)
-- **Admin:** [juris-meet-admin.onrender.com](https://juris-meet-admin.onrender.com/)
 
 ---
 
